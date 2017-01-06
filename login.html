@@ -1,0 +1,26 @@
+<!--以下也為參考-->
+
+   <form action="" method="post">
+      <div class="form-group has-feedback">
+        <input type="username" name="username" class="form-control" id="username" value="{{request.session.account}}" placeholder="使用者"> <!--name傳回view.py-->
+        <span class="glyphicon glyphicon-user form-control-feedback"></span> <!--人像的圖片 其他可搜尋"glyphicon glyphicon"-->
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" name="password" class="form-control" id="password" placeholder="密碼">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span> <!--鎖的圖片-->
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox" name="remember_me" {{request.session.zone}} value="1" /> 記住我
+            </label>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat" onclick="Save()">登入</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
